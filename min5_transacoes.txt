@@ -1,0 +1,9 @@
+5 transações mais baratas: [1.01, 1.32, 1.36, 1.54, 1.58]
+5 transações mais baratas por categoria:
+casa: [1.54, 1.58, 1.93, 2.36, 11.46]
+lazer: [1.68, 2.64, 6.57, 8.07, 9.95]
+viagens: [2.02, 2.09, 2.95, 10.28, 14.38]
+investimentos: [2.14, 2.22, 2.4, 2.88, 3.03]
+transferencias: [1.66, 3.32, 6.52, 7.65, 7.87]
+saude: [1.32, 2.93, 3.87, 5.97, 6.55]
+alimentacao: [1.01, 1.36, 1.95, 1.97, 2.0]

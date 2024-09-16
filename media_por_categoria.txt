@@ -1,0 +1,8 @@
+Média das Transações por Categoria:
+investimentos: 491.67
+viagens: 495.35
+saude: 496.86
+transferencias: 515.19
+casa: 497.89
+lazer: 505.01
+alimentacao: 493.07
