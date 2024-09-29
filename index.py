@@ -1,43 +1,3 @@
-# projeto_transacoes_bancarias -- DS-PY-17 - logica de programacao II
-# readme link here: 
-# https://github.com/allansuzuki/ADA_classes/blob/main/DS-PY-Data-Science/DS-PY-017%20L%C3%93GICA%20DE%20PROGRAMA%C3%87%C3%83O%20II%20(PY)/Material%20do%20Aluno/projeto_README.md
-# 
-# Esse programa é um sistema de gestao de transacoes de uma conta bancária pessoal
-# no qual os dados são de transações e possuem seu valor, a categoria do gasto e seu ID.
-# 
-# Teu objetivo é completar esse sistema CRUD (Create-Read-Update-Delete) simples 
-# para ver dados de transacao da tua conta pessoal, criar, editar e excluir transações.
-# Também deve fazer com que o programa NUNCA pare, ou seja,
-# caso ocorra um possível erro, deve validar as entradas, detectar erros e avisar o usuário
-# mas o programa não deve parar.
-#
-#
-# Notas importantes: 
-# 1. As funções que geram os dados e criam a interface do sistema já estão prontas. 
-# por favor não as altere.
-#
-# 2. Depois das funções do sistema estão as funções do programa
-# No qual podem alterar à vontade, exceto o nome das funções
-# Ou seja, podem criar funções, adicionar ou remover parâmetros, 
-# mas não alterar o nome das funções existentes.
-#
-# 3. Coloque opções de navegabilidade em cada janela que o usuário estiver.
-# Por exemplo, se ele escolher a opcao "alterar transacao" sem querer, tem que ter a opcao de voltar para a tela anterior ou inicial.
-#
-# 4. Caso por qualquer motivo queira os dados originais novamente,
-# apage o json `transactions` na pasta `data` e inicie o programa novamente para gerar os dados.
-# Os valores serão os mesmos, porém os UUID NÃO serão os mesmos!!
-#
-# Critérios (pontos):
-#   tarefas validacoes  total
-# C     10      15       25
-# R     25      25       50
-# U     10      10       20
-# D     2.5     2.5      5
-#
-#
-# Boa sorte e divirtam-se :)
-# ------------------------------------------------------------------------------
 # -----------------------
 # depencies
 # -----------------------
@@ -56,7 +16,6 @@ from data import settings
 # -----------------------
 # SYSTEM functions 
 # -----------------------
-# não alterar nada das funções de system
 def criar_transacoes(num_transacoes, proporcao_categorias, seed=settings.seed):
     assert sum([proporcao_categorias[k] for k in proporcao_categorias])==1, '`proporcao_categorias` não soma 100%! Favor rever.'
 
@@ -115,8 +74,6 @@ def tela_inicial():
 # -----------------------
 # PROGRAM functions 
 # -----------------------
-# pode editar como quiser as funções abaixo! Somente não altere os nomes das funções.
-# para alterar as funções abaixo, basta apagar o `pass` e preencher com as instruções.
 
 def run():
     """
@@ -239,7 +196,7 @@ def visualizar_relatorios():
 def salvar_relatorio(nome_arquivo, conteudo): # Victor
     """
     Salvar o relatório gerado em .txt
-    \nAplicar esta função em todos os relatórios listados em visualizar_relatorios
+    Aplicar esta função em todos os relatórios listados em visualizar_relatorios
     """
 
     try:
@@ -253,17 +210,6 @@ def salvar_relatorio(nome_arquivo, conteudo): # Victor
     '''
     Quando for chamar a função salvar relatório, em caso da variável ser um número float, deve
     transformar a variável em uma formatação "bonitinha" em string, para que não haja conflito.
-
-    Além disso, quando for chamar a função, a chamada deve ocorrer antes do ´return´.
-    Exemplo:
-
-    media = soma / len(bd)
-
-    media = f"{media:.2f}"
-
-    salvar_relatorio("media.txt", media)
-
-    return media
     '''
     
 def deseja_salvar_relatorio(): # Rafael
@@ -296,10 +242,10 @@ def calcular_total_transacoes(): # Rafael
 def mostrar_m5_transacoes(**m): # Rafael
     """
     Mostra as m5 transações realizadas, sendo m parâmetro que deve ser adicionada à função.
-    \nm : 'max','min','median', sendo 
-    \n\t'max' mostra os top 5 maior valor,
-    \n\t'min' mostra os top 5 menor valor,
-    \n\t'mean' mostra os top 5 valores próximos a média
+    m : 'max','min','median', sendo 
+    'max' mostra os top 5 maior valor,
+    'min' mostra os top 5 menor valor,
+    'mean' mostra os top 5 valores próximos a média
     
     Utilize essa mesma função para o caso `por categoria`
     """
@@ -403,7 +349,7 @@ def consultar_transacao_por_ID(): # Rogerio
 def cadastrar_transacao(): # Pedro
     """
     Cadastra uma nova transação.
-    \nObs:Para gerar um novo uuid, veja como é feito na função `criar_transacoes`.
+    Obs:Para gerar um novo uuid, veja como é feito na função `criar_transacoes`.
     """
     while True:
         try:
@@ -514,13 +460,13 @@ def excluir_transacao(): # Thales
 # -----------------------
 # MAIN SCRIPT
 # -----------------------
-# não alterar nada abaixo
+
 if __name__ == "__main__":
     
     # -----------------------
     # NÃO ALTERAR ESTE BLOCO
     # -----------------------
-    # criar o banco de dados caso ele não exista
+
     print(os.path.abspath('.'))
     if not os.path.exists('./data/transactions.json'):
         criar_bd()
@@ -529,9 +475,6 @@ if __name__ == "__main__":
     bd = load_bd()
     # -----------------------
 
-    # -----------------------
-    # ABAIXO PODE ALTERAR
-    # -----------------------
     #limpar console (opcional)
     os.system('cls' if os.name == 'nt' else 'clear')
     # inicia o programa
